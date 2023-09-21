@@ -1,103 +1,107 @@
-# Bitacora
+## Logbook
 
-## Dia 1
+## Day 1
 
-Se crea todo el entorno de Fast Api, el entorno virtual, asi como los modelos de las tablas requeridas en Mysql
+The whole Fast Api environment is created, the virtual environment, as well as the models of the required tables in Mysql.
 
-Se crea una funcion en models para crear tablas a partir de las especificaciones de la base de datos
+A function is created in models to create tables from the database specifications.
 
-Se crea el endpoint que lee el csv de entrada mediante pandas
+We create the endpoint that reads the input csv using pandas.
 
-Se usa un for dinamico para leer las columnas de la tabla que se va a subir a Mysql, y se empieza a iterar sobre el dataframe de entrada para insertar los registros en la tabla. 
+Use a dynamic for to read the columns of the table to be uploaded to Mysql, and start iterating over the input dataframe to insert the records in the table. 
 
-## Dia 2
+## Day 2
 
-Se crean los Endpoints para extraccion de las metricas requeridas
+Endpoints are created to extract the required metrics.
 
-Se crean los modelos de respuestas para cada endpoint get.
+Create the response models for each endpoint get.
 
-Se añade una carpeta test donde se crean algunos test unitarios para la validacion de los endpoints.
+A test folder is added where some unit tests are created for the validation of the endpoints.
 
-Se añade una carpeta con los csv que serviran para probar los endpoints.
+A folder is added with the csv files that will be used to test the endpoints.
 
-Se guardan las credenciales de la base de datos en un .env y se añade al .gitignore
+The database credentials are saved in a .env and added to the .gitignore.
 
-Se crea un archivo dockerfile slim para el despliegue del codigo en un contenedor Docker.
+A dockerfile slim file is created to deploy the code in a Docker container.
 
-## Dia 3
+## Day 3
 
-Se crean los .gitignore y .dockerignore
+.gitignore and .dockerignore are created.
 
-Se adecua el archivo Dockerfile para hacer deploys en gcloud 
+The Dockerfile is adapted to deploy in gcloud. 
 
-Se despliega con exito, se pueden ver los detalles en el siguiente link: https://console.cloud.google.com/run/detail/us-west1/globant-api/metrics?hl=es-419&project=globant-data-challenge
+Deployed successfully, you can see the details in the following link: https://console.cloud.google.com/run/detail/us-west1/globant-api/metrics?hl=es-419&project=globant-data-challenge
 
-Pero el servicio aparece no disponible: https://globant-api-xou3iwbnsq-uw.a.run.app/
+But the service appears unavailable: https://globant-api-xou3iwbnsq-uw.a.run.app/ =c
 
 # Setup
 
-Para probar el servicio, se debe hacer lo siguiente:
+To test the service, you must do the following:
 
-## Paso 1: Clonar el repositorio
+## Step 1: Clone the repository.
 
-Ejecutar el siguiente comando:
+Run the following command:
 
 ``` git clone https://github.com/Stivy1/portfolio-DE.git ```
 
-## Paso 2: Instalar dependencias con Poetry
+## Step 2: Install dependencies with Poetry
 
-Primero, instalar el entrono virtual ejecutando:
+First, install the virtual environment by running:
 
 ``` python3 -m venv venv ```
 
-Despues, instalar poetry
+And activate
+
+``` source venv/bin/activate ```
+
+Next, install poetry
 
 ``` pip install poetry ```
 
-Despues actualizar los paquetes
+Then update the packages
 
 ``` poetry update package ```
 
-Esto instalara las dependencias del proyecto.
+This will install the project dependencies.
 
-## Paso 3: añadir el archivo .env
+## Step 3: add the .env file
 
-Para acceder a la base de datos, se debe crear la base de datos en MySQL, y posteriormente poner las credenciales en un archivo .env
-con la siguiente estructura:
+To access the database, you must create the database in MySQL, and then put the credentials in an .env file
+file with the following structure:
  
-host="<host>"
-user="<user>"
-password="<pass>"
-database="<database_name>"
+host="[host]"
+user="[user]"
+password="[pass]"
+database="[database_name]"
 
-## Paso 4: Levantar el servicio en local.
+## Step 4: Raise the service locally.
 
-Ahora, ejecutar el siguiente comando para levantar el servicio de manera correcta:
+Now, run the following command to raise the service properly:
 
-``` uvicorn app.main:app --reload ```
+``` uvicorn app.main:app --reload ```.
 
-Esto levantara el servicio, y se podra acceder en el host local: 
+This will bring up the service, and it will be accessible on the local host: 
 
 http://127.0.0.1:8000/
 
-Para acceder a la documentacion, ingresa al siguiente link:
+To access the documentation, go to the following link:
 
 http://127.0.0.1:8000/docs
 
-## Pruebas en Docs
+## Testing in Docs
 
-Para probar la subida de datos, puedes encontrar los archivos csv en la carpeta "input_files" y subirlas en el endpoint /UploadCSV/{table_name}, donde table_name debe ser el nombre especificado en la documentacion. 
+To test the data upload, you can find the csv files in the "input_files" folder and upload them in the /UploadCSV/{table_name} endpoint, where table_name should be the name specified in the documentation. 
 
-Esto creara las tablas requeridas.
+This will create the required tables.
 
-Posterior a la creacion, se puede probar los endpoints /getEmployeeHired2021 y /getDepartmentsMoreHiring
+After creation, you can test the /getEmployeeHired2021 and /getDepartmentsMoreHiring endpoints.
 
-## Pruebas Pytest 
+## Pytest tests 
 
-Para ejecutar las pruebas, se debe instalar la libreria pytest:
+To run the tests, the pytest library must be installed:
 
 ``` pip install pytest ```
 
-Y posteriormente, ejecutar el comando (Tener aun el servicio levantado):
+And then run the command (with the service still up):
 
-``` pytest ```
+```` pytest ```
