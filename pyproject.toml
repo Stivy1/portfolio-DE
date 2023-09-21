@@ -6,7 +6,7 @@ authors = ["Stivy"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 pandas = "^2.1.0"
 fastapi = "^0.103.1"
 mysql-connector = "^2.2.9"
