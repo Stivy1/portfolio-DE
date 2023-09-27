@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "globant-data-challenge"
+version = "0.1.0"
+description = "This project has the purpose of creating an API that uploads several CSV files to a MySQL database, receiving the name of the table to be created. In addition to query these tables already uploaded and validate some important metrics for business."
+authors = ["Stivy"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.1.0"
+fastapi = "^0.103.1"
+mysql-connector = "^2.2.9"
+stringcase = "^1.2.0"
+uvicorn = "^0.23.2"
+python-multipart = "^0.0.6"
+mysql-connector-python = "^8.1.0"
+python-dotenv = "^1.0.0"
+pytest = "^7.4.2"
+requests = "^2.31.0"
+httpx = "^0.25.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
