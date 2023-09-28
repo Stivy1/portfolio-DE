@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  mainapp:
+    image: b2b_clients_creation:0.1.0
+    container_name: mainapp
+    restart: unless-stopped
+    tty: true
+    networks:
+      - tropi_default
+    volumes:
+      - ./tropi_credentials.json:/secrets/tropi_credentials
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/tropi_credentials
+networks:
+  tropi_default:
+    external: true

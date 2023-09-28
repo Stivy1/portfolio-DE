@@ -1,0 +1,83 @@
+{
+    "sku": "7702047003466",
+    "aprox_cost": 15913.6,
+    "product_data": [
+        {
+            "product_id": "f78e6c1c-8476-4e06-a02f-7a94f4ea3ff5",
+            "name": "Fécula De Maíz Maizena Caja x 90 gr",
+            "category": "11",
+            "cost": 2042,
+            "image_url": "https://b2b-images-prd.s3.us-west-2.amazonaws.com/tropi/thumb_images/360019.png",
+            "measure": "UND",
+            "source": "MKP_B2B",
+            "check_date": None,
+            "rank": 1
+        },
+        {
+            "product_id": None,
+            "name": "Maizena-Fecula de Maiz",
+            "category": "0",
+            "cost": 2019,
+            "image_url": None,
+            "measure": "UND",
+            "source": "TEK",
+            "check_date": "2022-11-29 10:39:13.766200-05:00",
+            "rank": 2
+        },
+        {
+            "product_id": None,
+            "name": "Fécula De Maíz Maizena Caja(s) de 90 g",
+            "category": None,
+            "cost": 1998,
+            "image_url": None,
+            "measure": "UND",
+            "source": "Scrap-CH",
+            "check_date": "2022-08-22 09:55:19.873661-05:00",
+            "rank": 4
+        },
+        {
+            "product_id": None,
+            "name": "Fecula De Maiz Maizena 90 Gr",
+            "category": "Harinas y Mezclas",
+            "cost": 73500,
+            "image_url": None,
+            "measure": "UND",
+            "source": "Scrap-Q",
+            "check_date": "2022-12-14 08:37:34.458829-05:00",
+            "rank": 5
+        },
+        {
+            "product_id": None,
+            "name": "Fecula Maizena Corn 90 X80und",
+            "category": "Mezclas Para Hornear/Cocinar (No Perecedero)",
+            "cost": 9,
+            "image_url": None,
+            "measure": "UND",
+            "source": "LOGY",
+            "check_date": None,
+            "rank": 6
+        }
+    ],
+    "id": "28679ebc-c9bc-5f66-b78b-d34807df4240",
+    "_fivetran_deleted": False,
+    "_fivetran_synced": Timestamp("2022-07-20 01:48:16.639000+0000", tz="UTC"),
+    "categories": "Despensa",
+    "cost": 1346.0,
+    "created_at": Timestamp("2022-04-26 22:53:16+0000", tz="UTC"),
+    "deleted_at": NaT,
+    "image_url": "https://firebasestorage.googleapis.com/v0/b/treintaco.appspot.com/o/treinta%2Fstores%2F8474e22e-3396-53f5-96d5-0d988c60d772%2Finventory%2F95382070-142d-4714-94ec-fc4aa7318992?alt=media&token=57bbf686-22b0-42c6-9d07-7f4d9ce2d4a0",
+    "images": None,
+    "is_offline": 0,
+    "is_visible": 1,
+    "measure_id": <NA>,
+    "measurement_id": <NA>,
+    "name": "Maizena caja pequeña",
+    "notes": "",
+    "origin_id": 4,
+    "price": 1600.0,
+    "stock": 4.0,
+    "store_id": "8474e22e-3396-53f5-96d5-0d988c60d772",
+    "transactions": 2,
+    "updated_at": Timestamp("2022-07-20 01:43:51+0000", tz="UTC"),
+    "store_categories_id": "c48aabe8-21bb-5f52-9b0e-85889a4c5ddd"
+}

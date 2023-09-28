@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+  mainapp:
+    image: tropi_pipeline:0.1.0
+    container_name: mainapp
+    restart: unless-stopped
+    tty: true
+    # ports:
+    #   - "3100:3100"
+    # depends_on: 
+    #   - "mongo"
+    networks:
+      - tropi_default
+    volumes:
+      - ./tropi_credentials.json:/secrets/tropi_credentials
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/tropi_credentials
+  
+  # mongo:
+  #   image: mongo:4.0
+  #   container_name: mongo
+  #   restart: unless-stopped
+  #   tty: true
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - ./mongo:/data/db
+  #   networks:
+  #     - tropi_default
+
+networks:
+  tropi_default:
+    external: true

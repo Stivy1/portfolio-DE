@@ -1,0 +1,1 @@
+from .crud_gtins import gtins

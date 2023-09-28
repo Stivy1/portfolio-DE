@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Jefry Diiaz"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-cloud-bigquery = "^3.9.0"
+pymongo = "^4.3.3"
+DateTime = "^5.1"
+queuelib = "^1.6.2"
+google-cloud-secret-manager = "^2.16.1"
+tqdm = "^4.65.0"
+dask-bigquery = "^2022.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

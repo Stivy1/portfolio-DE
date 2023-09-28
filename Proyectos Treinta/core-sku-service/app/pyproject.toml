@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "sku-API"
+version = "0.1.0"
+description = "API to create database of products with SKU"
+authors = ["natalia-treinta <natalia.cardona@treinta.co>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+uvicorn = "^0.17.6"
+fastapi = "^0.78.0"
+requests = "^2.27.1"
+pandas = "^1.4.2"
+python-multipart = "^0.0.5"
+python-dotenv = "^0.20.0"
+google-cloud = "^0.34.0"
+google = "^3.0.0"
+gcloud = "^0.18.3"
+pandas-gbq = "^0.17.5"
+pyarrow = "^8.0.0"
+motor = "^3.0.0"
+pymongo = {extras = ["srv"], version = "^4.1.1"}
+fastapi-pagination = "^0.9.3"
+fastapi-csrf-protect = "^0.2.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
