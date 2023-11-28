@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "steam etl project"
+version = "0.1.0"
+description = "Data Engineer Project to show how to make an ETL using the Steam API to extract and Transform data and loaded to a MySQL database and later use the data to create dashboards in Looker Studio."
+authors = ["Stivy"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.3"
+mysql-connector-python = "^8.2.0"
+mysql-connector = "^2.2.9"
+pydantic = "^2.5.2"
+stringcase = "^1.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
